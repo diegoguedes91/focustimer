@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #fff; 
+    --text-color: #323238; 
+    --text-color-icon: #323238;
+    --text-color-icon-hover: gray;
+    --text-color-icon-sound: #E1E1E6;
+    --bg-color-icon: #E1E1E6; 
+    --bg-color-icon-selected:#02799D;
+    --bg-color-icon-hover:#094d61;
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    display: grid;
+    height: 100vh;
+    place-content: center;
+}
+
+#app{
+    display: flex;
+    gap: 19.2rem;
+}
+
+#pomodorotimer{
+    display: grid;
+    justify-items: center;
+    margin-bottom: 8rem;
+    margin-top: 3rem;
+}
+
+.flex{
+    display: flex;
+}
+
+#timer {
+    font-size: 9.6rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+#controls{
+     display: flex;
+     gap: 3rem;
+}
+
+#controls button{
+    background-color: transparent;
+    border: 0;
+    color: var(--text-color-icon);
+
+    cursor: pointer;
+
+    font-size: 3.4rem;
+
+}
+
+#controls button:hover{
+    color: var(--text-color-icon-hover);
+}
+
+#sounds{ 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px; 
+}
+
+.sound{ 
+    font-size: 3.4rem;
+    padding: 3rem;
+
+    color: var(--text-color-icon);
+    background-color: var(--bg-color-icon);
+    border: none;
+    border-radius: 1rem;
+
+    cursor: pointer;
+}
+
+.sound:hover{
+    color: var(--text-color-icon-sound);
+    background-color: var(--bg-color-icon-hover);
+}
+
+.selected{
+    color: var(--text-color-icon-sound);
+    background-color: var(--bg-color-icon-selected);
+}

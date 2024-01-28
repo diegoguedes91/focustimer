@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Temporizador estilo pomodoro">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js" defer></script>
+
+    <title>Focus Time</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <div id="pomodorotimer">
+            
+            <section id="timer" class="flex">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+
+            <section id="controls" class="flex">
+                <button data-action="play" class="ph-bold ph-play-circle"></button>
+                <button data-action="stop" class="ph-bold ph-stop-circle"></button>
+                <button data-action="plus" class ="ph-bold ph-plus-circle"></button>
+                <button data-action="minus" class="ph-bold ph-minus-circle"></button>
+            </section>
+
+        </div>
+
+        <div id="sounds">
+            <button data-action="forest" id="forest" class="ph-bold ph-tree-evergreen sound"></button>
+            <button data-action="rain" id="rain" class="ph-bold ph-cloud-rain sound"></button>
+            <button data-action="coffeeShop" id="coffeeShop" class="ph-bold ph-storefront sound" ></button>
+            <button data-action="firePlace" id="firePlace" class="ph-bold ph-flame sound"></button>
+        </div>
+    </div>
+    
+</body>
+</html>
